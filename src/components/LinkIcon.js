@@ -1,3 +1,5 @@
+import { isMobile } from "../utils/screen";
+
 export const LinkIcon = ({
 	href,
 	alt,
@@ -10,7 +12,10 @@ export const LinkIcon = ({
 			rel="noreferrer"
 			alt={alt}
 			className={icon}
-			style={{ fontSize: '3.5rem', margin: '0 1rem' }}
+			style={{
+				fontSize: isMobile ? '2rem' : '3.5rem',
+				margin: '0 1rem'
+			}}
 		>
 		</a>
 	);
