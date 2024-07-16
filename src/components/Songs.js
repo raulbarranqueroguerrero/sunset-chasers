@@ -1,6 +1,11 @@
 import { Spotify } from "react-spotify-embed";
-import { albumLink, songLink } from "../constants";
+import {
+	// albumLink,
+	// songLink
+}
+	from "../constants";
 import { isMobile } from "../utils/screen";
+import Youtube from "./Youtube";
 
 export const Songs = () => {
 	return (
@@ -11,11 +16,11 @@ export const Songs = () => {
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
-				marginBottom: isMobile ? '6rem' : '7.5rem',
-				flexDirection: isMobile && 'column',
+				marginBottom: isMobile ? '6rem' : '',
+				// flexDirection: isMobile && 'column',
 			}}
 		>
-			<Spotify
+			{/* <Spotify
 				link={songLink}
 				style={{ marginRight: !isMobile && '1rem' }}
 			/>
@@ -26,6 +31,12 @@ export const Songs = () => {
 					margin: !isMobile && '0 5rem',
 					width: isMobile && '90%'
 				}}
+			/> */}
+			<Youtube
+				src={'https://www.youtube.com/embed/U79i6P0yXwk?si=rhydz0jVNN7VE7CT'}
+				title={'When You Got Me'}
+				width={isMobile ? 300 : 1120}
+				height={isMobile ? 180 : 630}
 			/>
 		</div >
 	);
